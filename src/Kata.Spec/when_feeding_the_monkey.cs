@@ -80,7 +80,7 @@ namespace Kata.Spec
 
         Because of = () => { _result = _systemUnderTest.Add("1,2\n3"); };
 
-        It should_split_and_sum_all_the_numbers = () => { _result.Should().Be(0); };
+        It should_split_and_sum_all_the_numbers = () => { _result.Should().Be(6); };
         private static Calculator _systemUnderTest;
         private static int _result;
     }
