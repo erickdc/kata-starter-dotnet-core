@@ -28,7 +28,7 @@ namespace Kata
             var negativeNumbers = numbers.Where(n => n < 0);
             if (negativeNumbers.Any())
             {
-                throw new Exception("negatives not allowed: -3");
+                throw new Exception($"negatives not allowed: {string.Join(", ", negativeNumbers)}");
             }
             if (numbers.Length > 1)
             {
