@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace Kata
@@ -11,7 +12,12 @@ namespace Kata
                 return 0;    
             }
 
-            var numbers = number.Split(',').Select(int.Parse).ToArray();
+            var delimeters = new String[]
+            {
+                ",",
+                "\n"
+            };
+            var numbers = number.Split(delimeters, StringSplitOptions.None).Select(int.Parse).ToArray();
             if (numbers.Length > 1)
             {
                 return numbers.Sum();
