@@ -24,7 +24,7 @@ namespace Kata
                 delimiters = new[] {inputParts[0].Replace("//", "")};
                 numbersInput = inputParts[1];
             }
-            var numbers = numbersInput.Split(delimiters, StringSplitOptions.None).Select(int.Parse).ToArray();
+            var numbers = numbersInput.Split(delimiters, StringSplitOptions.None).Select(int.Parse).Where(n => n < 1001).ToArray();
             var negativeNumbers = numbers.Where(n => n < 0);
             if (negativeNumbers.Any())
             {
