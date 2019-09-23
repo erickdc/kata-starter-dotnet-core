@@ -30,14 +30,6 @@ namespace Kata.Spec
         private static Calculator _systemUnderTest;
         private static int _result;
     }
-
-    internal class Calculator
-    {
-        public int Add()
-        {
-            return -1;
-        }
-    }
 }
 
 /**
