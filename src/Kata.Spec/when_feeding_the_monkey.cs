@@ -83,6 +83,19 @@ namespace Kata.Spec
         private static Calculator _systemUnderTest;
         private static int _result;
     }
+
+    public class when_using_a_custom_delimeter
+    {
+        Establish _context = () =>
+        {
+            _systemUnderTest = new Calculator();
+        };
+
+        Because of = () => { _result = _systemUnderTest.Add("//;\n1;2"); };
+        It should_return_the_sum = () => { _result.Should().Be(3); };
+        private static Calculator _systemUnderTest;
+        private static int _result;
+    }
 }
 
 /**
