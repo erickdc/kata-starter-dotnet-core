@@ -42,6 +42,20 @@ namespace Kata.Spec
         private static Calculator _systemUnderTest;
         private static int _result;
     }
+
+    public class when_user_input_is_two_numbers
+    {
+        Establish _context = () =>
+        {
+            _systemUnderTest = new Calculator();
+        };
+
+        Because of = () => { _result = _systemUnderTest.Add("3,5"); };
+
+        It should_return_the_sum_of_those_two_numbers = () => { _result.Should().Be(8); };
+        private static Calculator _systemUnderTest;
+        private static int _result;
+    }
 }
 
 /**
