@@ -139,6 +139,19 @@ namespace Kata.Spec
         private static Calculator _systemUnderTest;
         private static int _result;
     }
+
+    public class when_add_with_custom_delimeter_between_brackets
+    {
+        Establish _context = () =>
+        {
+            _systemUnderTest = new Calculator();
+        };
+
+        Because of = () => { _result = _systemUnderTest.Add("//[***]\n1***2***3"); };
+        It should_return_the_sum_of_those_numbers = () => { _result.Should().Be(6); };
+        private static Calculator _systemUnderTest;
+        private static int _result;
+    }
     
 }
 

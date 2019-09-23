@@ -17,7 +17,7 @@ namespace Kata
                 inputString = parts[1];
             }
             
-            var numbers = inputString.Split(delimeters, StringSplitOptions.None).Select((int.Parse)).ToArray();
+            var numbers = inputString.Split(delimeters, StringSplitOptions.None).Select((int.Parse)).Where(n => n <= 1000).ToArray();
             var negativesNumbers = numbers.Where(n => n < 0).ToArray();
             if (negativesNumbers.Any())
             {
