@@ -10,7 +10,7 @@ namespace Kata
             var numbers = number.Split(",").Select((int.Parse)).ToArray();
             if (numbers.Length > 1)
             {
-                return numbers[0] + numbers[1];
+                return numbers.Sum();
             }
             return numbers[0];
         }
