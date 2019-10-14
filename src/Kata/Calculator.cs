@@ -9,14 +9,7 @@ namespace Kata
             if(string.IsNullOrEmpty(s))
                 return 0;
             var numbers = s.Split(",").Select(int.Parse);
-            var enumerable = numbers.ToList();
-            if (enumerable.Count() == 1)
-            {
-                return enumerable[0];
-            }
-
-            return enumerable[0] + enumerable[1];
-
+            return numbers.Sum();
         }
     }
 }
