@@ -17,7 +17,11 @@ namespace Kata
                 s = parts[1];
             }
             var numbers = s.Split(separators, StringSplitOptions.None).Select(int.Parse);
-            
+            var negativeNumbers = numbers.Where(n => n < 0);
+            if (negativeNumbers.Any())
+            {
+                throw new Exception("negatives not allowed: -2");
+            }
             return numbers.Sum();
         }
     }
