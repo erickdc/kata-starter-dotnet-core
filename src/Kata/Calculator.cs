@@ -9,12 +9,8 @@ namespace Kata
             if(string.IsNullOrEmpty(s))
                 return 0;
             var numbers = s.Split(",").Select(int.Parse);
-            if (numbers.Count() == 1)
-            {
-                return numbers.First();
-            }
-            var enumerable = numbers.ToList();
-            return enumerable.First() + enumerable.Last();
+            
+            return numbers.Sum();
         }
     }
 }
