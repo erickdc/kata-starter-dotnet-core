@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 
 namespace Kata
@@ -8,7 +9,8 @@ namespace Kata
         {
             if(string.IsNullOrEmpty(s))
                 return 0;
-            var numbers = s.Split(",").Select(int.Parse);
+            var delimeters = new [] { ",", "\n"};
+            var numbers = s.Split(delimeters, StringSplitOptions.None).Select(int.Parse);
             return numbers.Sum();
         }
     }
